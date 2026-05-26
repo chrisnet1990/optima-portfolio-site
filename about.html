@@ -1,69 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9664960327295339"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9664960327295339" crossorigin="anonymous"></script>
 
-     <meta name="title" content="Optima Portfolio | Nifty 50 & S&P 500 Portfolio Optimizer">
-<meta name="description" content="Use Monte Carlo simulations and Modern Portfolio Theory to optimize your stock portfolio. Analyze 1.4 million data points for Indian and US markets.">
-<meta name="keywords" content="Portfolio Optimization, Sharpe Ratio, Nifty 50, S&P 500, Stock Market Analysis, Monte Carlo Simulation">
+    <meta name="title" content="About Us | Optima Portfolio Optimization Engine">
+    <meta name="description" content="Discover the mathematical principles, algorithm architecture, and development mission behind the Optima Portfolio educational backtesting engine.">
+    <meta name="keywords" content="Portfolio Optimization, Sharpe Ratio, Nifty 50, S&P 500, Stock Market Analysis, Monte Carlo Simulation">
 
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.optimaportfolio.com/">
-<meta property="og:title" content="Optima Portfolio Optimizer">
-<meta property="og:description" content="Mathematically optimize your stock picks using historical data and algorithmic analysis.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.optimaportfolio.com/about.html">
+    <meta property="og:title" content="About Us | Optima Portfolio">
+    <meta property="og:description" content="Bridging the gap between retail investing and institutional-grade mathematics using 1.4 million historical data rows.">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>How it Works | Optima Portfolio</title>
+    <title>About Us | Optima Portfolio</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background: #f4f7f6; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; 
+            color: #c5cbd3; 
+            margin: 0; 
+            padding: 0; 
+            background: #0e1117; 
+        }
         
-        /* Updated Navbar to match Index.html exactly */
-        nav { background: #0e1117; padding: 15px; text-align: center; font-family: sans-serif; border-bottom: 1px solid #333; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 14px; }
+        nav { 
+            background: #0e1117; 
+            padding: 15px; 
+            text-align: center; 
+            font-family: sans-serif; 
+            border-bottom: 1px solid #333; 
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a { 
+            color: white; 
+            margin: 0 15px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 14px; 
+        }
         
-        .container { max-width: 800px; margin: 30px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        h1 { color: #0e1117; border-bottom: 2px solid #ff4b4b; padding-bottom: 10px; }
-        h2 { color: #262730; margin-top: 30px; }
-        .step { background: #e8f0fe; padding: 15px; border-radius: 5px; margin-bottom: 10px; border-left: 5px solid #1a73e8; }
+        .container { 
+            max-width: 850px; 
+            margin: 40px auto; 
+            padding: 40px; 
+            background: #1e222b; 
+            border-radius: 8px; 
+            border: 1px solid #2d3139;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3); 
+        }
+        h1, h2, h3 { 
+            color: #ffffff; 
+        }
+        h1 { 
+            border-bottom: 2px solid #ff4b4b; 
+            padding-bottom: 10px; 
+            margin-top: 0;
+        }
+        h2 {
+            margin-top: 35px;
+            border-bottom: 1px solid #2d3139;
+            padding-bottom: 5px;
+        }
+        p, li { 
+            color: #c5cbd3; 
+            font-size: 16px;
+        }
+        .step { 
+            background: #111622; 
+            padding: 20px; 
+            border-radius: 6px; 
+            margin-bottom: 15px; 
+            border-left: 5px solid #ff4b4b; 
+        }
+        .step strong {
+            color: #ffffff;
+        }
+        ol {
+            padding-left: 20px;
+        }
+        ol li {
+            margin-bottom: 10px;
+        }
         
-        /* Responsive tweaks */
         @media (max-width: 600px) {
-            .container { margin: 10px; padding: 15px; }
+            .container { margin: 15px; padding: 20px; }
             nav a { margin: 0 8px; font-size: 12px; }
         }
     </style>
 </head>
 <body>
 
-<nav style="background: #0e1117; padding: 15px; text-align: center; font-family: sans-serif; border-bottom: 1px solid #333;">
-    <a href="index.html" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 14px;">📊 The App</a>
-    <a href="about.html" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 14px;">📖 How it Works</a>
-    <a href="privacy.html" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 14px;">🔒 Privacy Policy</a>
-    <a href="contact.html" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 14px;">✉️ Contact Us</a>
+<nav>
+    <a href="index.html">📊 The App</a>
+    <a href="about.html">📖 How it Works</a>
+    <a href="privacy.html">🔒 Privacy Policy</a>
+    <a href="contact.html">✉️ Contact Us</a>
 </nav>
 
     <div class="container">
-        <h1>Understanding Optima Portfolio</h1>
-        <p>Optima Portfolio is an educational engine built to bridge the gap between retail investing and institutional-grade mathematics. Our mission is to provide high-quality financial analysis tools for the next generation of investors.</p>
+        <h1>About Optima Portfolio</h1>
+        <p>Optima Portfolio is an advanced educational backtesting engine built to bridge the gap between casual retail investing and institutional-grade mathematical strategy. Our platform is dedicated to democratizing computational financial analysis tools for the next generation of global market participants.</p>
         
-        <h2>How the Optimization Works</h2>
-        <p>Most investors pick stocks based on recent hype. Our app uses <strong>Modern Portfolio Theory (MPT)</strong>. By analyzing 10 years of history (over 1.4 million data points), we calculate the <strong>Efficient Frontier</strong>.</p>
-        
+        <h2>The Core Framework Architecture</h2>
+        <p>While standard retail platforms focus primarily on short-term market noise or single-asset performance trends, Optima Portfolio evaluates variance across broader structural matrices. Utilizing open-source asset analysis libraries and robust local calculations, our platform processes more than 10 years of historical macroeconomic metrics across 1.4 million individual stock records to compile mathematical baselines.</p>
         
         <div class="step">
-            <strong>The Monte Carlo Method:</strong> We don't just calculate one outcome. We simulate 2,000 different ways to split your money across your chosen stocks to find the one with the highest Sharpe Ratio.
+            <strong>Modern Portfolio Theory (MPT):</strong> Instead of focusing purely on picking individual winning tickers, our architecture leverages Markowitz diversification matrices. This allows users to map out the exact mathematical allocations required to maximize return potential relative to systemic portfolio variance.
+        </div>
+        
+        <div class="step">
+            <strong>The Monte Carlo Engine:</strong> To accurately visualize variance and portfolio risk distribution paths, our backend runs massive iteration matrices. The tool processes up to 2,000 distinct randomized mathematical paths for your chosen combination of assets, mapping out the precise distribution cloud of potential outcomes.
         </div>
 
-        <h2>User Guide</h2>
+        <h2>User Application Guide</h2>
         <ol>
-            <li><strong>Select Market:</strong> Choose between Indian (Nifty 50) or US (S&P 500) data sets.</li>
-            <li><strong>Pick Stocks:</strong> Select at least 5 companies to allow for proper diversification and mathematical variance.</li>
-            <li><strong>Analyze:</strong> Review the Sharpe Ratio and Alpha to see if your strategy beats the benchmark index over time.</li>
+            <li><strong>Define Your Baseline Index:</strong> Toggle between the Indian Stock Market (benchmarked against the Nifty 50 Index) or the United States Market (benchmarked against the S&P 500 Index).</li>
+            <li><strong>Select Assets for Diversification:</strong> Select a minimum of 5 historical tickers. Broad diversification allows the portfolio calculation engine to calculate meaningful variance correlations across sector rows.</li>
+            <li><strong>Analyze Algorithmic Outputs:</strong> Evaluate your calculated optimal portfolio metrics. Review your optimized weights, pinpoint your placement against the Efficient Frontier, and evaluate your final Sharpe Ratio to confirm if your asset weights mathematically outperform basic market alternatives.</li>
         </ol>
 
-        <p style="font-size: 0.8em; color: #666; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px;">
-            <em><strong>Educational Disclaimer:</strong> This application is strictly for educational and research purposes. It is not a commercial financial product and does not constitute professional investment advice. The developers are not responsible for any financial decisions made based on this tool.Incase if you find any unique use case for the application feel free to share it to us in optimaportfolio@gmail.com or create a usecase video in youtube.</em>
+        <h2>Our Development Philosophy</h2>
+        <p>We believe that financial literacy should be grounded in empirical data rather than speculative trends. By allowing users to visually manipulate historical weight distributions, our goal is to show the immediate structural impacts of asset covariance, tracking error limits, and standard drawdowns on long-term capital preservation metrics.</p>
+
+        <p style="font-size: 0.85em; color: #8a939e; margin-top: 50px; border-top: 1px solid #2d3139; padding-top: 20px;">
+            <em><strong>Educational & Academic Disclaimer:</strong> Optima Portfolio is an independent development project designed exclusively for interactive educational analysis, computational exploration, and scientific research. This application does not constitute a commercial financial advisory service, brokerage interface, or personalized investment distribution channel. The calculations generated inside this framework do not constitute official financial advice or capital placement guidelines. The developers hold zero legal liability for empirical trading decisions made using this research framework. For user feedback or system inquiries, reach our administration desk directly at admin@optimaportfolio.com.</em>
         </p>
     </div>
 </body>
