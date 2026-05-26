@@ -1,165 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9664960327295339" crossorigin="anonymous"></script>
-    <meta name="title" content="Optima Portfolio | Nifty 50 & S&P 500 Portfolio Optimizer">
-    <meta name="description" content="Use Monte Carlo simulations and Modern Portfolio Theory to optimize your stock portfolio. Analyze 1.4 million data points for Indian and US markets.">
-    <meta name="keywords" content="Portfolio Optimization, Sharpe Ratio, Nifty 50, S&P 500, Stock Market Analysis, Monte Carlo Simulation">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9664960327295339"
+     crossorigin="anonymous"></script>
+<meta name="title" content="Optima Portfolio | Nifty 50 & S&P 500 Portfolio Optimizer">
+<meta name="description" content="Use Monte Carlo simulations and Modern Portfolio Theory to optimize your stock portfolio. Analyze 1.4 million data points for Indian and US markets.">
+<meta name="keywords" content="Portfolio Optimization, Sharpe Ratio, Nifty 50, S&P 500, Stock Market Analysis, Monte Carlo Simulation">
 
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.optimaportfolio.com/">
-    <meta property="og:title" content="Optima Portfolio Optimizer">
-    <meta property="og:description" content="Mathematically optimize your stock picks using historical data and algorithmic analysis.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.optimaportfolio.com/">
+<meta property="og:title" content="Optima Portfolio Optimizer">
+<meta property="og:description" content="Mathematically optimize your stock picks using historical data and algorithmic analysis.">
      
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Optima Portfolio | Portfolio Optimization Engine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Optima Portfolio</title>
     <style>
         body, html {
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0e1117;
-            color: #f4f7f6;
-            scroll-behavior: smooth;
-        }
-        nav {
-            background: #0e1117; 
-            padding: 15px; 
-            text-align: center; 
-            font-family: sans-serif; 
-            border-bottom: 1px solid #333;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav a {
-            color: white; 
-            margin: 0 15px; 
-            text-decoration: none; 
-            font-weight: bold; 
-            font-size: 14px;
-        }
-        .app-container {
+            height: 100%;
             width: 100%;
-            height: 85vh; /* Gives the app a prominent display while hinting at scrollability */
+            overflow: hidden;
             background-color: #0e1117;
+        }
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
         }
         iframe {
+            flex-grow: 1;
             width: 100%;
-            height: 100%;
             border: none;
-        }
-        .article-section {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-        .content-card {
-            background: #1e222b;
-            padding: 40px;
-            border-radius: 8px;
-            margin-bottom: 40px;
-            border: 1px solid #2d3139;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-        h1, h2, h3 {
-            color: #ffffff;
-        }
-        h2 {
-            border-bottom: 2px solid #ff4b4b;
-            padding-bottom: 10px;
-            margin-top: 0;
-        }
-        p {
-            line-height: 1.7;
-            color: #c5cbd3;
-            font-size: 16px;
-        }
-        ul, ol {
-            color: #c5cbd3;
-            line-height: 1.7;
-        }
-        .formula-box {
-            background: #0e1117;
-            padding: 15px;
-            border-left: 4px solid #ff4b4b;
-            font-family: 'Courier New', Courier, monospace;
-            color: #ff4b4b;
-            margin: 20px 0;
-            font-size: 18px;
-            text-align: center;
         }
     </style>
 </head>
 <body>
+    <div class="main-container">
+        <nav style="background: #0e1117; padding: 15px; text-align: center; font-family: sans-serif; border-bottom: 1px solid #333;">
+            <a href="index.html" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 14px;">📊 The App</a>
+            <a href="about.html" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 14px;">📖 How it Works</a>
+            <a href="privacy.html" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 14px;">🔒 Privacy Policy</a>
+            <a href="contact.html" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 14px;">✉️ Contact Us</a>
+        </nav>
 
-    <nav>
-        <a href="index.html">📊 The App</a>
-        <a href="about.html">📖 How it Works</a>
-        <a href="privacy.html">🔒 Privacy Policy</a>
-        <a href="contact.html">✉️ Contact Us</a>
-    </nav>
-
-    <div class="app-container">
-        <iframe src="https://optimaportfolio.streamlit.app/?embed=true" allow="fullscreen"></iframe>
+        <iframe 
+            id="app-frame"
+            src="https://optimaportfolio.streamlit.app/?embed=true" 
+            allow="fullscreen"
+        ></iframe>
     </div>
 
-    <div class="article-section">
+    <script>
+        const iframe = document.getElementById('app-frame');
         
-        <div class="content-card">
-            <h2>What is the Sharpe Ratio and Why Does It Matter?</h2>
-            <p>When evaluating investment performance, most retail investors look purely at nominal returns. If Portfolio A gained 15% last year and Portfolio B gained 10%, a surface-level glance suggests Portfolio A is the superior choice. However, institutional finance relies on a deeper metric developed by Nobel laureate William F. Sharpe: <strong>The Sharpe Ratio</strong>. This metric answers a fundamental question: <em>Was that extra return earned through smart investing or by taking on reckless amounts of risk?</em></p>
-            
-            <h3>The Core Concept: Risk-Adjusted Returns</h3>
-            <p>The Sharpe Ratio measures the risk-adjusted return of an investment portfolio. It quantifies how much excess return you receive for the extra volatility you endure by holding a risky asset instead of a completely safe one.</p>
-            
-            <div class="formula-box">
-                Sharpe Ratio = (Rp - Rf) / &sigma;p
-            </div>
-            
-            <p>Where <strong>Rp</strong> represents the expected portfolio return, <strong>Rf</strong> is the risk-free rate of return (such as government bond yields), and <strong>&sigma;p</strong> is the standard deviation of the portfolio's returns (volatility). By subtracting the risk-free rate, the metric isolates the exact value added by your asset configuration strategy.</p>
-            
-            <h3>Interpreting the Benchmarks</h3>
-            <ul>
-                <li><strong>Below 1.0:</strong> Suboptimal. The portfolio generates returns, but the volatility is too high relative to the reward.</li>
-                <li><strong>1.0 to 1.99:</strong> Good. The portfolio successfully generates an acceptable amount of excess return relative to its risk profile.</li>
-                <li><strong>2.0 to 2.99:</strong> Very Good. Exceptional asset allocation that significantly minimizes price swings.</li>
-                <li><strong>3.0 or Higher:</strong> Excellent. Rare and highly efficient asset configuration.</li>
-            </ul>
-        </div>
-
-        <div class="content-card">
-            <h2>Understanding the Efficient Frontier in Modern Portfolio Theory</h2>
-            <p>In 1952, economist Harry Markowitz revolutionized global finance with a simple premise: a portfolio’s risk depends less on the individual riskiness of its component stocks and more on how those stocks move <em>in relation to one another</em>. This framework, known as <strong>Modern Portfolio Theory (MPT)</strong>, introduced the concept of the <strong>Efficient Frontier</strong>.</p>
-            
-            <h3>The Power of Diversification and Correlation</h3>
-            <p>If you buy five different technology stocks, your portfolio is highly vulnerable to sector corrections. They are highly correlated. However, if you blend asset classes or industries—such as pairing volatile tech giants with stable consumer goods, utility providers, or energy sectors—the stocks often move independently of one another. When one industry drops, another might hold steady, reducing your overall risk profile without automatically slashing your potential gains.</p>
-            
-            <h3>Defining the Frontier</h3>
-            <p>Imagine a coordinate grid where the horizontal axis represents Risk (Standard Deviation) and the vertical axis represents Expected Return. If you mapped thousands of random combinations of asset allocations on this graph, they would form a distinct cloud shape. The absolute top edge of this cloud forms a curved boundary line called the Efficient Frontier.</p>
-            <ul>
-                <li><strong>Maximum Return for Specific Risk:</strong> Any portfolio sitting directly on this line offers the maximum possible return achievable for that exact level of volatility.</li>
-                <li><strong>Minimum Risk for Specific Return:</strong> Conversely, looking at the curve shows you the specific asset blend that achieves a target return with the absolute lowest risk possible.</li>
-            </ul>
-        </div>
-
-        <div class="content-card">
-            <h2>How Monte Carlo Simulations Calculate Investment Variance</h2>
-            <p>The future of the stock market is not a single path; it is an infinite web of possibilities. While traditional mathematical models rely on static historical averages, real-world markets suffer from unexpected shocks and non-linear trends. To solve this, advanced asset management tools deploy <strong>Monte Carlo Simulations</strong>.</p>
-            
-            <h3>What is a Monte Carlo Simulation?</h3>
-            <p>Named after the casino resort in Monaco, a Monte Carlo simulation is an algorithmic computational technique that uses repeated random sampling to simulate probability distributions. Instead of calculating a single forecast, the algorithm runs thousands of distinct "brute force" mathematical experiments to simulate how a group of assets might behave under wildly different market environments.</p>
-            
-            <h3>The Mechanism of Action</h3>
-            <p>When you trigger an optimization over a multi-year historical dataset containing over 1.4 million records, the simulation executes a multi-step mathematical routine:</p>
-            <ol>
-                <li><strong>Statistical Mapping:</strong> The algorithm analyzes the precise historical parameters of your chosen assets—calculating their variances and cross-asset correlations.</li>
-                <li><strong>Randomized Price Generation:</strong> The simulation introduces a randomized variable to model daily price fluctuations while honoring the underlying structural asset correlations.</li>
-                <li><strong>Mass Iteration:</strong> The system models an entire simulated year of trading days, repeating the process 2,000 times or more within seconds.</li>
-            </ol>
-            <p>The resulting outputs map out a complete bell curve of probability, highlighting tail-risk downfalls along with the most probable trajectories to capture your target weights safely.</p>
-        </div>
-
-    </div>
+        iframe.addEventListener('load', () => {
+            try {
+                const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+                const style = iframeDocument.createElement('style');
+                style.textContent = `
+                    footer, header, #MainMenu { display: none !important; visibility: hidden !important; }
+                    [data-testid="stFooter"], [data-testid="stHeader"] { display: none !important; }
+                    .stAppFooter { display: none !important; }
+                `;
+                iframeDocument.head.appendChild(style);
+            } catch (e) {
+                console.log("Cross-origin restrictions prevented direct injection, applying frame container safety padding.");
+                // Fallback: If browser security blocks inner injection, slightly crop the bottom 50px out of view
+                iframe.style.height = "calc(100% + 50px)";
+                iframe.style.marginBottom = "-50px";
+            }
+        });
+    </script>
 </body>
 </html>
